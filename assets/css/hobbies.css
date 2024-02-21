@@ -1,0 +1,112 @@
+#hobbies {
+    color: white;
+    padding: 20rem 5rem;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-bottom: 2.5rem;
+}
+.hobbies-title-container h1 {
+    font-size: 2rem;
+    margin-right: .5rem;
+}
+.title-icon-container {
+    display: flex;
+}
+.hobby-title-icon {
+    display: inline-block;
+    background-image: url(../images/hobby.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+}
+.line {
+    border-bottom: 3px solid lightgreen;
+    width: 100%;
+}
+
+.hobbies-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.hobby {
+    opacity: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+    padding: .5rem;
+    margin-bottom: 3rem;
+    border-radius: 9px;
+    background-color: #243029;
+    box-shadow: rgba(48, 221, 66, 0.4) -5px 5px, rgba(48, 221, 66, 0.3) -10px 10px, rgba(48, 221, 66, 0.2) -15px 15px, rgba(48, 221, 66, 0.1) -20px 20px, rgba(48, 221, 66, 0.05) -25px 25px;
+}
+.hobby-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 4rem;
+    width: 4rem;
+}
+
+.hobby:nth-child(1) .hobby-icon {
+    background-image: url(../images/player.png);
+}
+.hobby:nth-child(2) .hobby-icon {
+    background-image: url(../images/guitar-playing.png);
+}
+.hobby:nth-child(3) .hobby-icon {
+    background-image: url(../images/games.png);
+}
+.hobby:nth-child(4) .hobby-icon {
+    background-image: url(../images/browsing.png);
+}
+.hobby:nth-child(5) .hobby-icon {
+    background-image: url(../images/adventurer.png);
+}
+.hobby:nth-child(6) .hobby-icon {
+    background-image: url(../images/hiking.png);
+}
+
+
+.hobby:nth-child(1).reveal {
+    --axis: -3.5rem;
+    animation: revealX .5s ease-in-out forwards;
+}
+.hobby:nth-child(2).reveal {
+    --axis: -3.5rem;
+    animation: revealX .5s ease-in-out forwards;
+}
+.hobby:nth-child(3).reveal {
+    --axis: -3.5rem;
+    animation: revealX .5s ease-in-out forwards;
+}
+.hobby:nth-child(4).reveal {
+    --axis: -3.5rem;
+    animation: revealX .5s ease-in-out forwards;
+}
+.hobby:nth-child(5).reveal {
+    --axis: -3.5rem;
+    animation: revealX .5s ease-in-out forwards;
+}
+.hobby:nth-child(6).reveal {
+    --axis: -3.5rem;
+    animation: revealX .5s ease-in-out forwards;
+}
+
+@media only screen and (max-width: 900px) {
+
+    #hobbies {
+        padding: 6rem 2rem;
+    }
+
+}

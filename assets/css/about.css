@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+#about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    padding: 0 7rem;
+}
+
+.about-info {
+    color: white;
+    width: 50%;
+}
+
+.socials-container {
+    margin-top: 1rem;
+}
+.social .fb {
+    opacity: 0;
+    height: 36px;
+    width: 36px;
+    fill: lightgreen;
+    transition: .15s fill ease-in-out;
+}
+.social .fb:hover {
+    fill: white;
+}
+.about-info.reveal .fb {
+    --axis: -2rem;
+    animation: revealY 1s ease-in-out forwards;
+}
+
+.name {
+    opacity: 0;
+    font-family: "Permanent Marker", cursive;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+.about-info.reveal .name {
+    --axis: 1.5rem;
+    animation: revealY 1s ease-in-out forwards;
+}
+.about-info p {
+    opacity: 0;
+}
+.about-info.reveal p {
+    --axis: -1.5rem;
+    animation: revealY 1s ease-in-out forwards;
+}
+
+.profile-container {
+    position: relative;
+    width: 50%;
+}
+.profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url(../images/profile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50rem;
+    width: 25rem;
+    animation: float 3s ease-in-out infinite
+}
+.profile::after {
+    content: ' ';
+    position: absolute;
+    left: 61%;
+    bottom: 9rem;
+    width: 30%;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    filter: blur(6px);
+    animation: reduce 3s ease-in-out infinite;
+}
+
+
+@keyframes float {
+    50% {
+        transform: translate(-50%,-54%);
+    }to {
+        transform: translate(-50%,-50%);
+    }
+}
+@keyframes reduce {
+    50% {
+        transform: scale(90%);
+    }
+    to {
+        transform: scale(100%);
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .about-content {
+        padding: 0 3rem;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+
+}
+
+@media only screen and (max-width: 960px) {
+    #about {
+        height: auto;
+    }
+    .profile-container {
+        height: 45rem;
+        width: 100%;
+    }
+    .profile {
+        left: 25%;
+    }
+    .about-info {
+        width: auto;
+    }
+    .about-content {
+        flex-direction: column-reverse;
+        padding: 0 1rem;
+    }
+    .about-info {
+        text-align: center;
+    }
+}
